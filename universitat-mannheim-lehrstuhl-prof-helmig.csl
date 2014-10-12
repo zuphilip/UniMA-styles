@@ -14,7 +14,7 @@
     <category field="communications"/>
     <category field="social_science"/>
     <summary>Zitierstil implemeniert die Richtlinien zur formalen Gestaltung von schriftlichen Arbeiten (Stand Dezember 2013) am Lehrstuhl von Prof. Helmig, BWL, Universität Mannheim</summary>
-    <updated>2014-10-06T06:57:38+00:00</updated>
+    <updated>2014-10-12T20:28:38+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en-US">
@@ -455,11 +455,13 @@
     </sort>
     <layout suffix=".">
       <group delimiter=", ">
-        <group delimiter=" ">
-          <text macro="author"/>
-          <text macro="year-date" prefix="(" suffix=")"/>
+        <group delimiter=": ">
+          <group delimiter=" ">
+            <text macro="author"/>
+            <text macro="year-date" prefix="(" suffix=")"/>
+          </group>
+          <text variable="title"/>
         </group>
-        <text variable="title"/>
         <choose>
           <if type="article-magazine article-journal" match="any">
             <group delimiter=": ">
